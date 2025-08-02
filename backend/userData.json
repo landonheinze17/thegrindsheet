@@ -1,0 +1,38 @@
+{
+  "landonheinze17@gmail.com": {
+    "sessions": [
+      {
+        "id": 1754118988750,
+        "date": "2025-08-02",
+        "gameType": "Cash Game",
+        "stakes": ".02/.05",
+        "duration": 4,
+        "result": 200,
+        "notes": "f",
+        "opponents": [],
+        "leakCategories": [
+          "timing"
+        ],
+        "keyHands": "AKo vs 10"
+      }
+    ],
+    "goals": [
+      {
+        "id": 1754114340833,
+        "amount": 500,
+        "deadline": "2025-08-31",
+        "description": "first leg of end of year goal",
+        "startingBankroll": 200
+      }
+    ],
+    "transactions": [
+      {
+        "id": 1754114327187,
+        "date": "2025-08-02",
+        "type": "starting_bankroll",
+        "amount": 200,
+        "reason": "Initial bankroll set"
+      }
+    ]
+  }
+}
