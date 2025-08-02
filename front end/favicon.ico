@@ -1,0 +1,16 @@
+# Favicon Placeholder
+
+This is a placeholder for the favicon.ico file.
+
+To add a proper favicon:
+
+1. Create a 16x16, 32x32, or 64x64 pixel icon
+2. Save it as favicon.ico
+3. Replace this file with your actual favicon
+
+You can use online tools like:
+- favicon.io
+- realfavicongenerator.net
+- favicon-generator.org
+
+For now, the application will work without a favicon, but it's recommended to add one for a professional appearance. 

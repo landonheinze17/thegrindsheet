@@ -1,0 +1,33 @@
+{
+  "name": "the-grind-sheet-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for The Grind Sheet - Professional Poker Bankroll Tracker",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -c-1",
+    "dev": "npx http-server . -p 3000 -c-1",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "echo 'Deploy to Netlify via git push or drag and drop'"
+  },
+  "keywords": [
+    "poker",
+    "bankroll",
+    "tracker",
+    "frontend",
+    "netlify",
+    "static-site"
+  ],
+  "author": "The Grind Sheet Team <thegrindsheetteam@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/the-grind-sheet.git"
+  },
+  "homepage": "https://thegrindsheet.com",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+} 

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grind Sheet - Professional Poker Bankroll Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div id="app">
+        <!-- Loading screen -->
+        <div id="loading-screen" class="loading-screen">
+            <div class="loading-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <div class="logo-document"></div>
+                        <div class="logo-text-line-1"></div>
+                        <div class="logo-text-line-2"></div>
+                    </div>
+                    <h1>The Grind Sheet</h1>
+                </div>
+                <div class="loading-spinner"></div>
+                <p>Loading your poker journey...</p>
+            </div>
+        </div>
+
+        <!-- Main application content -->
+        <div id="main-content" class="main-content" style="display: none;">
+            <!-- Login/Register Form -->
+            <div id="auth-container" class="auth-container">
+                <div class="auth-box">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-document"></div>
+                            <div class="logo-text-line-1"></div>
+                            <div class="logo-text-line-2"></div>
+                        </div>
+                        <h1>The Grind Sheet</h1>
+                    </div>
+                    
+                    <div id="login-form" class="auth-form">
+                        <h2>Welcome Back</h2>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <input type="email" id="loginEmail" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="loginPassword" placeholder="Password" required>
+                            </div>
+                            <button type="submit" class="btn-primary">Login</button>
+                        </form>
+                        <p class="auth-switch">
+                            Don't have an account? <a href="#" id="showRegister">Register</a>
+                        </p>
+                        <p class="forgot-password">
+                            <a href="#" id="showForgotPassword">Forgot Password?</a>
+                        </p>
+                    </div>
+
+                    <div id="register-form" class="auth-form" style="display: none;">
+                        <h2>Create Account</h2>
+                        <form id="registerForm">
+                            <div class="form-group">
+                                <input type="text" id="registerName" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="registerEmail" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="registerPassword" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
+                            </div>
+                            <button type="submit" class="btn-primary">Register</button>
+                        </form>
+                        <p class="auth-switch">
+                            Already have an account? <a href="#" id="showLogin">Login</a>
+                        </p>
+                    </div>
+
+                    <div id="forgot-password-form" class="auth-form" style="display: none;">
+                        <h2>Reset Password</h2>
+                        <form id="forgotPasswordForm">
+                            <div class="form-group">
+                                <input type="email" id="forgotEmail" placeholder="Email" required>
+                            </div>
+                            <button type="submit" class="btn-primary">Send Reset Link</button>
+                        </form>
+                        <p class="auth-switch">
+                            Remember your password? <a href="#" id="showLoginFromForgot">Login</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Dashboard -->
+            <div id="dashboard" class="dashboard" style="display: none;">
+                <header class="dashboard-header">
+                    <div class="header-content">
+                        <div class="logo">
+                            <div class="logo-icon">
+                                <div class="logo-document"></div>
+                                <div class="logo-text-line-1"></div>
+                                <div class="logo-text-line-2"></div>
+                            </div>
+                            <h1>The Grind Sheet</h1>
+                        </div>
+                        <div class="user-info">
+                            <span id="userName">Welcome</span>
+                            <button id="logoutBtn" class="btn-secondary">Logout</button>
+                        </div>
+                    </div>
+                </header>
+
+                <main class="dashboard-main">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Total Sessions</h3>
+                            <p id="totalSessions">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Total Profit/Loss</h3>
+                            <p id="totalProfitLoss">$0.00</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Win Rate</h3>
+                            <p id="winRate">0%</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Average Session</h3>
+                            <p id="avgSession">$0.00</p>
+                        </div>
+                    </div>
+
+                    <div class="session-form-container">
+                        <h2>Add New Session</h2>
+                        <form id="sessionForm" class="session-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sessionDate">Date</label>
+                                    <input type="date" id="sessionDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sessionDuration">Duration (hours)</label>
+                                    <input type="number" id="sessionDuration" min="0.5" step="0.5" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sessionBuyIn">Buy-in Amount</label>
+                                    <input type="number" id="sessionBuyIn" min="0" step="0.01" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sessionCashOut">Cash-out Amount</label>
+                                    <input type="number" id="sessionCashOut" min="0" step="0.01" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sessionNotes">Notes (optional)</label>
+                                <textarea id="sessionNotes" rows="3" placeholder="Describe your session..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Add Session</button>
+                        </form>
+                    </div>
+
+                    <div class="sessions-list-container">
+                        <h2>Recent Sessions</h2>
+                        <div id="sessionsList" class="sessions-list">
+                            <!-- Sessions will be populated here -->
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
